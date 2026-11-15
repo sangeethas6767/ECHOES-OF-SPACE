@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Detective Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <header>
+        <h2>🚀 ECHOES OF SPACE</h2>
+        <a href="index.html">Home</a>
+    </header>
+
+    <main class="container">
+
+        <!-- QUIZ SELECTION -->
+        <section id="selectionPage">
+            <h1>Space Detective Quiz</h1>
+            <p class="subtitle">Choose your destination and test your space knowledge!</p>
+
+            <div class="destination-container">
+
+                <div class="destination-card moon-card">
+                    <div class="planet">🌕</div>
+                    <h2>Explore the Moon</h2>
+                    <p>Discover the forgotten machines, Apollo missions and equipment left behind on the Moon.</p>
+                    <button onclick="startQuiz('moon')">Explore Moon</button>
+                </div>
+
+                <div class="destination-card mars-card">
+                    <div class="planet">🔴</div>
+                    <h2>Explore Mars</h2>
+                    <p>Discover Mars rovers, landers and the machines exploring the Red Planet.</p>
+                    <button onclick="startQuiz('mars')">Explore Mars</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- QUIZ SECTION -->
+        <section id="quizPage" class="hidden">
+
+            <button class="back-btn" onclick="goBack()">← Choose Destination</button>
+
+            <h1 id="quizTitle">Moon Quiz</h1>
+
+            <div class="quiz-info">
+                <span id="questionNumber">Question 1 of 10</span>
+                <span id="score">Score: 0</span>
+            </div>
+
+            <div class="progress-container">
+                <div id="progressBar"></div>
+            </div>
+
+            <div class="quiz-box">
+                <h2 id="question">Question appears here</h2>
+
+                <div id="options"></div>
+
+                <p id="feedback"></p>
+
+                <button id="submitBtn" onclick="submitAnswer()">Submit Answer</button>
+                <button id="nextBtn" class="hidden" onclick="nextQuestion()">Next Question →</button>
+            </div>
+
+        </section>
+
+        <!-- RESULT SECTION -->
+        <section id="resultPage" class="hidden">
+            <h1>Mission Completed! 🚀</h1>
+            <p id="resultMessage"></p>
+            <h2 id="finalScore"></h2>
+
+            <button onclick="restartQuiz()">Try Again</button>
+            <button onclick="goBack()">Choose Another Destination</button>
+        </section>
+
+    </main>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
