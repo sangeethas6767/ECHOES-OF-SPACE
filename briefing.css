@@ -1,0 +1,331 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #070D1B;
+    color: white;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    width: 100%;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #080D1B;
+    border-bottom: 1px solid #20304b;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+    color: #67BFFF;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #D5E0F0;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: #67BFFF;
+}
+
+.status {
+    font-size: 11px;
+    color: #72DDB5;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #42DCA4;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+/* HERO SECTION */
+
+.mission-hero {
+    min-height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(4, 9, 24, 0.98),
+        rgba(4, 9, 24, 0.75),
+        rgba(4, 9, 24, 0.3)
+    ),
+    url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564")
+    center/cover no-repeat;
+}
+
+.mission-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    animation: appear 1.3s ease;
+}
+
+.mission-label {
+    color: #6ABEFF;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.mission-id {
+    color: #9EACC3;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.mission-content h1 {
+    font-size: clamp(42px, 7vw, 80px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.mission-content h1 span {
+    display: block;
+    color: #64B8FF;
+}
+
+.intro {
+    color: #D0DAE9;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+.divider {
+    height: 2px;
+    width: 80px;
+    background: #4CAFFF;
+    margin: 35px 0;
+}
+
+.welcome {
+    color: #70C5FF;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.story {
+    color: #CFD9E9;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 17px 30px;
+    background: #2188DB;
+    border: 1px solid #69BCFF;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1168B5;
+    box-shadow: 0 0 25px rgba(45, 154, 255, 0.5);
+    transform: translateY(-3px);
+}
+
+.scroll-text {
+    margin-top: 35px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #9AABC3;
+}
+
+/* OBJECTIVES */
+
+.objectives {
+    padding: 100px 8%;
+    text-align: center;
+    background: #0B1427;
+}
+
+.section-label {
+    color: #69BFFF;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.objectives h2,
+.confirmation h2 {
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.section-description {
+    color: #AAB9CE;
+    margin-top: 18px;
+    margin-bottom: 50px;
+}
+
+.objective-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.objective-card {
+    flex: 1;
+    min-width: 230px;
+    max-width: 340px;
+    padding: 35px 25px;
+    text-align: left;
+    background: linear-gradient(
+        145deg,
+        #142541,
+        #0D172A
+    );
+    border: 1px solid #263F60;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.objective-card:hover {
+    transform: translateY(-10px);
+    border-color: #62B9FF;
+    box-shadow: 0 0 25px rgba(53, 145, 225, 0.15);
+}
+
+.number {
+    color: #68BFFF;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.objective-card h3 {
+    margin: 20px 0 15px;
+    letter-spacing: 2px;
+}
+
+.objective-card p {
+    color: #B8C7DB;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* CONFIRMATION */
+
+.confirmation {
+    display: none;
+    padding: 100px 20px;
+    text-align: center;
+    background: #091426;
+}
+
+.confirmation-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.success-icon {
+    color: #6BC4FF;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.confirmation p:not(.section-label) {
+    color: #B9C9DD;
+    line-height: 1.8;
+    margin: 25px 0;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #050914;
+    color: #91A4BF;
+    font-size: 11px;
+    line-height: 2;
+    letter-spacing: 2px;
+}
+
+/* ANIMATION */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .status {
+        display: none;
+    }
+
+    .mission-hero {
+        min-height: 85vh;
+        padding: 60px 7%;
+    }
+
+    .mission-content h1 {
+        font-size: 43px;
+    }
+
+    .objectives {
+        padding: 70px 7%;
+    }
+
+    .objective-card {
+        max-width: 100%;
+    }
+}
