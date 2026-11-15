@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Space | Echoes of Space</title>
+    <link rel="stylesheet" href="explore.css">
+</head>
+<body>
+
+    <header>
+        <h2>ECHOES OF SPACE</h2>
+        <a href="index.html">HOME</a>
+    </header>
+
+    <main>
+        <h1>CHOOSE YOUR DESTINATION</h1>
+        <p>Select a world to begin your exploration.</p>
+
+        <section class="planet-container">
+
+            <div class="planet-card">
+                <img src="https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=800"
+                     alt="Moon">
+
+                <h2>MOON EXPLORATION</h2>
+                <p>Discover the mysteries of Earth's natural satellite.</p>
+
+                <button onclick="selectDestination('moon')">
+                    EXPLORE MOON
+                </button>
+            </div>
+
+            <div class="planet-card">
+                <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=800"
+                     alt="Mars">
+
+                <h2>MARS EXPLORATION</h2>
+                <p>Travel to the red planet and uncover its secrets.</p>
+
+                <button onclick="selectDestination('mars')">
+                    EXPLORE MARS
+                </button>
+            </div>
+
+        </section>
+
+        <button onclick="continueExploration()" >
+            CONTINUE EXPLORATION
+        </button>
+
+        <p id="message">Select Moon or Mars to continue.</p>
+    </main>
+
+    <script src="explore.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mission Briefing | Echoes of Space</title>
+
+    <link rel="stylesheet" href="briefing.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            ✦ ECHOES OF SPACE
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="#mission">MISSION</a>
+            <a href="#objectives">OBJECTIVES</a>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+    </nav>
+
+
+    <!-- Mission Hero Section -->
+    <section class="mission-hero">
+
+        <div class="overlay"></div>
+
+        <div class="mission-content">
+
+            <p class="mission-label">
+                SPACE EXPLORATION AGENCY
+            </p>
+
+            <p class="mission-id">
+                MISSION ID: EOS-2026-001
+            </p>
+
+            <h1>
+                YOUR MISSION
+                <span>BEGINS HERE.</span>
+            </h1>
+
+            <p class="intro">
+                Beyond Earth, forgotten machines remain scattered
+                across distant worlds. Their missions may have ended,
+                but their stories are waiting to be discovered.
+            </p>
+
+            <div class="divider"></div>
+
+            <p class="welcome">
+                WELCOME, SPACE ARCHAEOLOGIST.
+            </p>
+
+            <p class="story" id="mission">
+                You have been selected for an extraordinary journey.
+                Your task is to investigate the machines left behind
+                on the Moon and Mars, uncover their original purposes,
+                and reveal the scientific discoveries they made.
+            </p>
+
+            <button id="acceptBtn" onclick="acceptMission()">
+                ACCEPT MISSION →
+            </button>
+
+            <p class="scroll-text">
+                SCROLL TO VIEW YOUR OBJECTIVES ↓
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Mission Objectives -->
+    <section class="objectives" id="objectives">
+
+        <p class="section-label">YOUR ASSIGNMENT</p>
+
+        <h2>MISSION OBJECTIVES</h2>
+
+        <p class="section-description">
+            Three important tasks stand between you and your discovery.
+        </p>
+
+        <div class="objective-container">
+
+            <div class="objective-card">
+                <span class="number">01</span>
+                <h3>DISCOVER</h3>
+                <p>
+                    Locate the forgotten spacecraft, scientific
+                    instruments and robotic explorers left in space.
+                </p>
+            </div>
+
+            <div class="objective-card">
+                <span class="number">02</span>
+                <h3>INVESTIGATE</h3>
+                <p>
+                    Understand why each artifact was launched,
+                    how it worked and what mission it served.
+                </p>
+            </div>
+
+            <div class="objective-card">
+                <span class="number">03</span>
+                <h3>UNCOVER</h3>
+                <p>
+                    Explore the scientific discoveries and
+                    technological achievements made possible
+                    by these machines.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Confirmation Panel -->
+    <section class="confirmation" id="confirmation">
+
+        <div class="confirmation-content">
+            <div class="success-icon">✦</div>
+
+            <p class="section-label">MISSION STATUS</p>
+
+            <h2>MISSION ACCEPTED</h2>
+
+            <p>
+                Your journey as a Space Archaeologist has officially begun.
+                Prepare to explore the unknown.
+            </p>
+
+            <button onclick="continueMission()">
+                PROCEED TO EXPLORATION →
+            </button>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 ECHOES OF SPACE</p>
+        <p>DISCOVER. EXPLORE. UNCOVER.</p>
+    </footer>
+
+
+    <script src="briefing.js"></script>
+
+</body>
+</html>

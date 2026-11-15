@@ -1,0 +1,241 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #070D1B;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #080D1B;
+    border-bottom: 1px solid #263956;
+}
+
+.logo {
+    color: #69BFFF;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #D6E1F0;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.nav-links a:hover {
+    color: #69BFFF;
+}
+
+.planet-hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.planet-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(3,8,20,.95),
+        rgba(3,8,20,.45)
+    );
+}
+
+.hero-content {
+    position: relative;
+    max-width: 700px;
+}
+
+.label {
+    color: #6ABEFF;
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: clamp(50px, 8vw, 85px);
+    margin-bottom: 20px;
+}
+
+.hero-content p:not(.label) {
+    color: #D0DCEE;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #2189DB;
+    padding: 16px 25px;
+    border: 1px solid #68BFFF;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.explore-btn:hover {
+    background: #1265A9;
+    box-shadow: 0 0 22px #2189DB77;
+    transform: translateY(-3px);
+}
+
+.facts-section,
+.gallery-section {
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.facts-section h2,
+.gallery-section h2,
+.quiz-invitation h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #AABBD1;
+    margin-bottom: 40px;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.fact-card {
+    background: linear-gradient(145deg,#172B49,#0D1729);
+    padding: 30px;
+    border: 1px solid #294665;
+    border-radius: 10px;
+    text-align: left;
+    transition: .3s;
+}
+
+.fact-card:hover {
+    transform: translateY(-6px);
+    border-color: #67BFFF;
+}
+
+.fact-number {
+    color: #69BFFF;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.fact-card h3 {
+    margin: 15px 0;
+}
+
+.fact-card p {
+    color: #BDCADB;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    background: #14223A;
+    border: 1px solid #294665;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item p {
+    padding: 15px;
+    color: #D8E5F6;
+}
+
+.quiz-invitation {
+    padding: 90px 20px;
+    text-align: center;
+    background: radial-gradient(
+        circle at center,
+        #1B3459,
+        #080E1D 75%
+    );
+}
+
+.quiz-invitation p:not(.label) {
+    color: #B7C7DC;
+    line-height: 1.8;
+    margin: 20px auto 30px;
+    max-width: 600px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #050914;
+    color: #93A8C3;
+    line-height: 2;
+    font-size: 11px;
+}
+
+@media(max-width:750px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .planet-hero {
+        padding: 60px 7%;
+    }
+}
